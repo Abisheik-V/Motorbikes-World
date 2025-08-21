@@ -92,51 +92,51 @@
         <div class="col-lg-7" data-aos="fade-up">
           <div class="card shadow p-4">
             <h2 class="text-center text-danger mb-4">Book Your Ride</h2>
-            <form>
-              <!-- Full Name -->
-              <div class="mb-3">
-                <input type="text" class="form-control" placeholder="Full Name" required>
-              </div>
-              <!-- Email -->
-              <div class="mb-3">
-                <input type="email" class="form-control" placeholder="Email" required>
-              </div>
-              <!-- Phone -->
-              <div class="mb-3">
-                <input type="tel" class="form-control" placeholder="Phone Number" required>
-              </div>
-              <!-- Select Bike -->
-              <div class="mb-3">
-                <select class="form-select" required>
-                  <option selected disabled>Select a Bike</option>
-                  <option>Yamaha R15</option>
-                  <option>KTM Duke 390</option>
-                  <option>Royal Enfield Classic</option>
-                  <option>Harley Davidson Iron 883</option>
-                  <option>BMW S1000RR</option>
-                </select>
-              </div>
-              <!-- Booking Date -->
-              <div class="mb-3">
-                <input type="date" class="form-control" required>
-              </div>
-              <!-- Duration -->
-              <div class="mb-3">
-                <select class="form-select" required>
-                  <option selected disabled>Booking Duration</option>
-                  <option>1 Day</option>
-                  <option>3 Days</option>
-                  <option>1 Week</option>
-                  <option>1 Month</option>
-                </select>
-              </div>
-              <!-- Message -->
-              <div class="mb-3">
-                <textarea class="form-control" rows="3" placeholder="Special Requests / Message"></textarea>
-              </div>
-              <!-- Submit -->
-              <a href="booking-confirmation.html"></a><button type="submit" class="btn btn-danger w-100">Confirm Booking</button>
-            </form>
+          <form id="bookingForm">
+  <!-- Full Name -->
+  <div class="mb-3">
+    <input type="text" class="form-control" placeholder="Full Name" name="name" required>
+  </div>
+  <!-- Email -->
+  <div class="mb-3">
+    <input type="email" class="form-control" placeholder="Email" name="email" required>
+  </div>
+  <!-- Phone -->
+  <div class="mb-3">
+    <input type="tel" class="form-control" placeholder="Phone Number" name="phone" required>
+  </div>
+  <!-- Select Bike -->
+  <div class="mb-3">
+    <select class="form-select" name="bike" required>
+      <option selected disabled>Select a Bike</option>
+      <option>Yamaha R15</option>
+      <option>KTM Duke 390</option>
+      <option>Royal Enfield Classic</option>
+      <option>Harley Davidson Iron 883</option>
+      <option>BMW S1000RR</option>
+    </select>
+  </div>
+  <!-- Booking Date -->
+  <div class="mb-3">
+    <input type="date" class="form-control" name="date" required>
+  </div>
+  <!-- Duration -->
+  <div class="mb-3">
+    <select class="form-select" name="duration" required>
+      <option selected disabled>Booking Duration</option>
+      <option>1 Day</option>
+      <option>3 Days</option>
+      <option>1 Week</option>
+      <option>1 Month</option>
+    </select>
+  </div>
+  <!-- Message -->
+  <div class="mb-3">
+    <textarea class="form-control" rows="3" placeholder="Special Requests / Message" name="message"></textarea>
+  </div>
+  <!-- Submit -->
+  <a href="booking-confirmation.html"></a><button type="submit" class="btn btn-danger w-100">Confirm Booking</button>
+</form>
           </div>
         </div>
       </div>
@@ -203,6 +203,20 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
+    document.getElementById("bookingForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // stop normal submit
+
+    // Get form data
+    const formData = new FormData(this);
+    const bookingDetails = {};
+    formData.forEach((value, key) => bookingDetails[key] = value);
+
+    // Save data to localStorage (to pass between pages)
+    localStorage.setItem("bookingData", JSON.stringify(bookingDetails));
+
+    // Redirect to confirmation page
+    window.location.href = "booking-confirmation.html";
+  });
   </script>
 </body>
 </html>
