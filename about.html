@@ -49,12 +49,79 @@
     footer a:hover{ color:#e50914; }
 
     /* Media Queries */
-    @media (max-width: 768px) {
-      .about-img {
-        max-height: 300px;
-        margin-bottom: 20px;
-      }
+    @media (max-width: 575.98px) {
+    .navbar .navbar-brand {
+      font-size: 1rem;
     }
+
+    .about-section {
+      padding: 30px 15px;
+      text-align: center;
+    }
+
+    .about-img {
+      max-height: 250px;
+      margin-bottom: 20px;
+    }
+
+    .about-section h2 {
+      font-size: 1.5rem;
+    }
+
+    footer .row {
+      text-align: center;
+    }
+
+    footer .col-12, 
+    footer .col-6 {
+      margin-bottom: 20px;
+    }
+
+    #backTop {
+      right: 0.8rem;
+      bottom: 4rem;
+    }
+  }
+
+  /* Medium Devices (Tablets, ≥576px and <992px) */
+  @media (min-width: 576px) and (max-width: 991.98px) {
+    .about-section {
+      padding: 40px 20px;
+    }
+
+    .about-img {
+      max-height: 300px;
+      margin-bottom: 20px;
+    }
+
+    .about-section h2 {
+      font-size: 2rem;
+    }
+
+    footer .row {
+      text-align: center;
+    }
+
+    footer .col-lg-4 {
+      margin-bottom: 20px;
+    }
+  }
+
+  /* Large Devices (Desktops, ≥992px) */
+  @media (min-width: 992px) {
+    .about-section {
+      padding: 70px 0;
+    }
+
+    .about-img {
+      max-height: 400px;
+    }
+
+    .about-section h2 {
+      font-size: 2.2rem;
+    }
+  }
+
   </style>
 </head>
 <body>

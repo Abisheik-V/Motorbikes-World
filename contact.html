@@ -34,7 +34,7 @@
       background-color: #222;
       border: 1px solid #444;
       color: #fff;
-      
+
     }
     .form-control::placeholder {
       color: #aaa;
@@ -49,6 +49,101 @@
     }
      footer a{ color:#ffffff; text-decoration:none; }
     footer a:hover{ color:#e50914; }
+    /* =========================
+   MEDIA QUERIES FOR ALL DEVICES
+   ========================= */
+
+/* Small devices (phones, <576px) */
+@media (max-width: 575.98px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .navbar .nav-link {
+    font-size: 0.9rem;
+    padding: 6px 8px;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  form .form-control {
+    font-size: 0.9rem;
+  }
+
+  iframe {
+    height: 250px !important;
+  }
+
+  footer .row {
+    text-align: center;
+  }
+
+  footer .col-6, 
+  footer .col-12 {
+    width: 100% !important;
+  }
+
+  #backTop {
+    bottom: 2rem;
+    right: 0.8rem;
+  }
+}
+
+/* Medium devices (tablets, ≥576px and <768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+
+  iframe {
+    height: 300px !important;
+  }
+
+  footer .row {
+    text-align: center;
+  }
+}
+
+/* Large devices (small laptops, ≥768px and <992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar .nav-link {
+    font-size: 1rem;
+  }
+
+  iframe {
+    height: 350px !important;
+  }
+}
+
+/* Extra large devices (desktops, ≥992px and <1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  iframe {
+    height: 400px !important;
+  }
+}
+
+/* XXL devices (large desktops, ≥1200px) */
+@media (min-width: 1200px) {
+  iframe {
+    height: 450px !important;
+  }
+}
+
   </style>
 </head>
 <body>

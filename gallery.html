@@ -49,11 +49,114 @@
     footer a:hover{ color:#e50914; }
 
     /* Responsive */
-    @media (max-width: 768px) {
-      .gallery-img {
-        height: 200px;
-      }
-    }
+    /* ===============================
+   MEDIA QUERIES FOR RESPONSIVENESS
+   =============================== */
+
+/* Extra small devices (phones <576px) */
+@media (max-width: 575.98px) {
+  .navbar .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .gallery-img {
+    height: 180px; /* reduce height for small screens */
+  }
+
+  .about-section,
+  section {
+    padding: 30px 15px;
+  }
+
+  .text-center h2, 
+  .text-center h3 {
+    font-size: 1.4rem;
+  }
+
+  footer .row {
+    text-align: center;
+  }
+
+  footer .col-12,
+  footer .col-6 {
+    margin-bottom: 20px;
+  }
+
+  #backTop {
+    right: 0.8rem;
+    bottom: 4rem;
+  }
+
+  iframe {
+    min-height: 200px;
+  }
+}
+
+/* Small to medium devices (≥576px and <768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .gallery-img {
+    height: 200px;
+  }
+
+  .text-center h2, 
+  .text-center h3 {
+    font-size: 1.6rem;
+  }
+
+  iframe {
+    min-height: 250px;
+  }
+}
+
+/* Medium devices (≥768px and <992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .gallery-img {
+    height: 220px;
+  }
+
+  .text-center h2, 
+  .text-center h3 {
+    font-size: 1.8rem;
+  }
+
+  iframe {
+    min-height: 300px;
+  }
+}
+
+/* Large devices (≥992px and <1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .gallery-img {
+    height: 240px;
+  }
+
+  .text-center h2, 
+  .text-center h3 {
+    font-size: 2rem;
+  }
+
+  iframe {
+    min-height: 350px;
+  }
+}
+
+/* Extra large devices (≥1200px) */
+@media (min-width: 1200px) {
+  .gallery-img {
+    height: 250px;
+  }
+
+  .text-center h2, 
+  .text-center h3 {
+    font-size: 2.2rem;
+  }
+
+  iframe {
+    min-height: 400px;
+  }
+}
+
+   
   </style>
 </head>
 <body>

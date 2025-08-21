@@ -116,26 +116,97 @@
     /* ===== Responsive Media Queries (mobile-first) ===== */
 
     /* Phones (≤576px) */
-    @media (max-width:576px){
-      .hero{ min-height:75vh; }
-      .card-img-top{ height:190px; }
-      .navbar .navbar-brand{ font-size:1rem; }
-    }
+   /* ===== Responsive Media Queries (mobile-first) ===== */
 
-    /* Tablets (577px–768px) */
-    @media (min-width:577px) and (max-width:768px){
-      .card-img-top{ height:210px; }
-    }
+/* Extra small devices (≤ 575px) */
+@media (max-width: 575px) {
+  body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
 
-    /* Small desktops (769px–1200px) */
-    @media (min-width:769px) and (max-width:1200px){
-      .card-img-top{ height:230px; }
-    }
+  .hero {
+    min-height: 70vh;
+    padding: 0 1rem;
+    background-position: center center;
+  }
 
-    /* Large desktops (≥1201px) */
-    @media (min-width:1201px){
-      .card-img-top{ height:260px; }
-    }
+  .hero h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+    padding: 0 .5rem;
+  }
+
+  .navbar .navbar-brand {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
+  .card-img-top {
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .container,
+  .row {
+    margin: 0 !important;
+    padding: 0 0.75rem !important;
+  }
+}
+
+/* Small devices (576px – 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .hero {
+    min-height: 75vh;
+    padding: 0 2rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .card-img-top {
+    height: 200px;
+  }
+}
+
+/* Medium devices (768px – 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero {
+    min-height: 80vh;
+  }
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+  .card-img-top {
+    height: 220px;
+  }
+}
+
+/* Large devices (992px – 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+  .card-img-top {
+    height: 240px;
+  }
+}
+
+/* Extra large devices (≥ 1200px) */
+@media (min-width: 1200px) {
+  .hero {
+    min-height: 90vh;
+  }
+  .hero h1 {
+    font-size: 3.2rem;
+  }
+  .card-img-top {
+    height: 260px;
+  }
+}
+
   </style>
 </head>
 <body>

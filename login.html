@@ -55,6 +55,68 @@
     }
      footer a{ color:#ffffff; text-decoration:none; }
     footer a:hover{ color:#e50914; }
+    /* Media Queries */
+    /* General Fix */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Navbar Toggler Fix (show icon on mobile) */
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,0.9%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Mobile First Adjustments */
+@media (max-width: 767px) {
+  .row.justify-content-center {
+    flex-direction: column;
+    align-items: center;
+  }
+  .col-md-5 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  .card {
+    margin-bottom: 1.5rem;
+  }
+  .navbar .nav-link {
+    text-align: center;
+    padding: 10px 0;
+  }
+  footer .d-flex.justify-content-between {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+/* Tablet Adjustments */
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-md-5 {
+    max-width: 80%;
+    flex: 0 0 80%;
+    margin: auto;
+  }
+  footer .row {
+    text-align: center;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1200px) {
+  .card {
+    padding: 2rem;
+  }
+  .btn-danger {
+    font-size: 1.1rem;
+  }
+}
+
   </style>
 </head>
 <body>
